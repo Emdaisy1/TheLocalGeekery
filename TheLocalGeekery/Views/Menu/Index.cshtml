@@ -26,9 +26,6 @@ else
 <table class="table table-condensed">
     <tr>
         <th>
-            
-        </th>
-        <th>
             Menu Item
         </th>
         <th>
@@ -44,12 +41,44 @@ else
         <tr>
             <td>
                 <img src="@item.ItemIconUrl" alt="@item.ItemName" />
+                @Html.ActionLink(item.ItemName, "Details", new { item = item.ItemName })
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemName)
+                @Truncate(item.ItemDescription, 50)
             </td>
             <td>
-                @Truncate(item.ItemDescription, 25)
+                @Html.DisplayFor(modelItem => item.ItemPrice)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<h3>Main Courses</h3>
+
+<table class="table table-condensed">
+    <tr>
+        <th>
+            Menu Item
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Where(a => a.ItemType == "Main"))
+    {
+        <tr>
+            <td>
+                <img src="@item.ItemIconUrl" alt="@item.ItemName" />
+                @Html.ActionLink(item.ItemName, "Details", new { item = item.ItemName })
+            </td>
+            <td>
+                @Truncate(item.ItemDescription, 50)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ItemPrice)
@@ -65,9 +94,6 @@ else
 <table class="table table-condensed">
     <tr>
         <th>
-
-        </th>
-        <th>
             Menu Item
         </th>
         <th>
@@ -82,13 +108,45 @@ else
     {
         <tr>
             <td>
+                <img src="@Url.Content(item.ItemIconUrl)" alt="@item.ItemName" />  
+                @Html.ActionLink(item.ItemName, "Details", new { id = item.ItemId })
+            </td>
+            <td>
+                @Truncate(item.ItemDescription, 50)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemPrice)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<h3>Beverages</h3>
+
+<table class="table table-condensed">
+    <tr>
+        <th>
+            Menu Item
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Where(a => a.ItemType == "Beverage"))
+    {
+        <tr>
+            <td>
                 <img src="@item.ItemIconUrl" alt="@item.ItemName" />
+                @Html.ActionLink(item.ItemName, "Details", new { item = item.ItemName })
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemName)
-            </td>
-            <td>
-                @Truncate(item.ItemDescription, 25)
+                @Truncate(item.ItemDescription, 50)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ItemPrice)

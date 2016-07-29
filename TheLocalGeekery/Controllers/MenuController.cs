@@ -19,13 +19,20 @@ namespace TheLocalGeekery.Controllers
         public async Task<ActionResult> Index()
         {
             var menuItems = menuDB.MenuItems;
-                //.Include(a => a.ItemIconUrl).Include(a => a.ItemName).Include(a => a.ItemDescription).Include(a => a.ItemPrice);
             return View(await menuItems.ToListAsync());
         }
 
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int? id)
         {
-            var menuItem = new MenuItem { ItemId = id };
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            MenuItem menuItem = await menuDB.MenuItems.FindAsync(id);
+            if (menuItem == null)
+            {
+                return HttpNotFound();
+            }
             return View(menuItem);
         }
     }

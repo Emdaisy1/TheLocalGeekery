@@ -185,6 +185,30 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\images\butterbeerFull.jpg" />
+    <Content Include="Assets\images\butterbeerIcon.jpg" />
+    <Content Include="Assets\images\buzzardWingsFull.jpg" />
+    <Content Include="Assets\images\buzzardWingsIcon.jpg" />
+    <Content Include="Assets\images\cheesyBunsFull.jpg" />
+    <Content Include="Assets\images\cheesyBunsIcon.jpg" />
+    <Content Include="Assets\images\chocoFrogsFull.jpg" />
+    <Content Include="Assets\images\chocoFrogsIcon.jpg" />
+    <Content Include="Assets\images\fishFingersCustardFull.jpg" />
+    <Content Include="Assets\images\fishFingersCustardIcon.jpg" />
+    <Content Include="Assets\images\lembasBreadFull.jpg" />
+    <Content Include="Assets\images\lembasBreadIcon.jpg" />
+    <Content Include="Assets\images\nukaColaFull.jpg" />
+    <Content Include="Assets\images\nukaColaIcon.jpg" />
+    <Content Include="Assets\images\portalCakeFull.jpg" />
+    <Content Include="Assets\images\portalCakeIcon.jpg" />
+    <Content Include="Assets\images\rockSirloinFull.jpg" />
+    <Content Include="Assets\images\rockSirloinIcon.jpg" />
+    <Content Include="Assets\images\RomulanAleFull.jpg" />
+    <Content Include="Assets\images\RomulanAleIcon.jpg" />
+    <Content Include="Assets\images\turkishDelightFull.jpg" />
+    <Content Include="Assets\images\turkishDelightIcon.jpg" />
+    <Content Include="Assets\images\YetosSoupFull.jpg" />
+    <Content Include="Assets\images\YetosSoupIcon.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -259,13 +283,11 @@
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Menu\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
