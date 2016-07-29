@@ -41,7 +41,7 @@ else
         <tr>
             <td>
                 <img src="@item.ItemIconUrl" alt="@item.ItemName" />
-                @Html.ActionLink(item.ItemName, "Details", new { item = item.ItemName })
+                @Html.ActionLink(item.ItemName, "Details", new { id = item.ItemId })
             </td>
             <td>
                 @Truncate(item.ItemDescription, 50)
@@ -75,7 +75,7 @@ else
         <tr>
             <td>
                 <img src="@item.ItemIconUrl" alt="@item.ItemName" />
-                @Html.ActionLink(item.ItemName, "Details", new { item = item.ItemName })
+                @Html.ActionLink(item.ItemName, "Details", new { id = item.ItemId })
             </td>
             <td>
                 @Truncate(item.ItemDescription, 50)
@@ -143,7 +143,7 @@ else
         <tr>
             <td>
                 <img src="@item.ItemIconUrl" alt="@item.ItemName" />
-                @Html.ActionLink(item.ItemName, "Details", new { item = item.ItemName })
+                @Html.ActionLink(item.ItemName, "Details", new { id = item.ItemId })
             </td>
             <td>
                 @Truncate(item.ItemDescription, 50)
