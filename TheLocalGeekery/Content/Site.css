@@ -35,3 +35,7 @@ textarea {
     color: rgb(157, 157, 157);
     background-color: rgb(51, 51, 51);
 }
+
+.menu-button {
+    position: center;
+}
